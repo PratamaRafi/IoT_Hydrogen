@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background-color: bisque;
+}
+
+.custom-nav {
+  background-color: #2C2A55 !important;
+}
+
+.custom-nav .navbar-brand {
+  margin-top: -7px;
+  margin-left: 50px;
+  font-weight: 500;
+  font-size: 1.4em;
+}
+
+.custom-nav .navbar-nav {
+  margin-right: 100px;
+}
+
+.custom-nav .navbar-nav .nav-link {
+  text-align: center;
+  margin-left: 2em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.custom-nav .navbar-nav .nav-link:hover {
+  color: white;
+}
+
+@media screen and (max-width: 992px) {
+  .custom-nav .navbar-nav .nav-link {
+    margin-right: 1.6em;
+  }
+  .custom-nav .navbar-nav .nav-link:hover {
+    color: #445ab2;
+  }
+}
+
+.content .upper-content {
+  margin-top: 3em;
+  margin-bottom: 2em;
+}
+
+.button .button-data {
+  margin-bottom: 2em;
+}
+
+.button .button-data a {
+  color: whitesmoke;
+  text-decoration: none;
+  margin-bottom: 3em;
+  padding: 1em 2em;
+  background-color: #2C2A55;
+  text-align: center;
+  border-radius: 1em;
+  font-weight: 400;
+}
+
+.button .button-data a:hover {
+  color: #2C2A55;
+  border: 2px solid #2C2A55;
+  background-color: transparent;
+}
+/*# sourceMappingURL=main.css.map */
