@@ -21,7 +21,6 @@ body {
     background-color: bisque;
 }
 
-
 .custom-nav{
     background-color: $priColor !important;
     .navbar-brand {
@@ -40,15 +39,16 @@ body {
             text-transform: uppercase;
 
             &:hover {
-                color: lighten(white, 50%);
+                color: darken(bisque, 10%);
             }
 
             @media screen and (max-width: 992px) {
                 margin-right: 1.6em;
+                text-transform: lowercase;
+                font-size: 1.1em;
                 &:hover {
-                    color: darken($textColor, 10%);
-            }
-                
+                    color: darken(bisque, 10%);
+            } 
             }
         }  
     }
@@ -56,14 +56,26 @@ body {
 
 // Upper Section
 .content {
+
     .upper-content {
+        @media screen and  (max-width: 992px){
+        h2,h3 {
+            font-size: 1.2em;
+        }
+        }
         margin-top: 3em;
         margin-bottom: 2em;
     }
 }
 
+// button
 .button {
     .button-data {
+        @media screen and  (max-width: 992px){
+            a {
+                margin-left: -50px;
+            }
+            }
         margin-bottom: 2em;
     a{
         color: whitesmoke;
@@ -81,5 +93,7 @@ body {
             background-color: transparent;
         }
     }
+  }
 }
-}
+
+
