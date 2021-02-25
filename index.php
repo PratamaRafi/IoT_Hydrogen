@@ -1,3 +1,7 @@
+<?php
+  require("PHP/conection.php"); // memanggil file koneksi.php untuk koneksi ke database
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -51,31 +55,31 @@
             <thead>
               <tr>
                 <th scope="col">No</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Debit(ml/min)</th>
+                <th scope="col">Waktu</th>
               </tr>
             </thead>
-            <tbody>
+            <?php
+            $SQL = mysqli_query($conection, "SELECT * FROM  ESP01 ORDER BY id DESC");
+
+            if(mysqli_num_rows($SQL) == 0){
+              echo '<tr><td colspan="14">Data Tidak Ada.</td></tr>';
+            }else {
+              $no = 1;
+              while($row = mysqli_fetch_assoc($SQL)){
+                echo'
+                <tbody>
               <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
+                <th scope="row">'.$no.'</th>
+                <td>'.$row.'</td>
+                <td>'.$row.'</td>
               </tr>
             </tbody>
+                ';
+                $no++;
+              }
+            }
+            ?>
           </table>
       </div>
       <!-- End Table Content -->
