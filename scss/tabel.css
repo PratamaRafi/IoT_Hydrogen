@@ -60,6 +60,7 @@ body {
 }
 
 .button .button-data {
+  font-size: 14px;
   margin-bottom: 2em;
 }
 
@@ -107,4 +108,4 @@ body {
 .table .col {
   border-radius: 1.7em;
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=tabel.css.map */

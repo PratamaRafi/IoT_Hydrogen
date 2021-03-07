@@ -1,5 +1,5 @@
 <?php
-  require("PHP/connection.php"); // memanggil file koneksi.php untuk koneksi ke database
+  require("connection.php"); // memanggil file koneksi.php untuk koneksi ke database
 ?>
 
 <!doctype html>
@@ -11,17 +11,17 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="../scss/tabel.css">
 
     <!-- Web icon -->
-    <link rel="icon" href="img/HB1.png">
+    <link rel="icon" href="../img/HB1.png">
     <title>Hyrdo-Mon</title>
   </head>
   <body>
       <!-- NAVBAR -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-light custom-nav fixed-top">
-        <a class="navbar-brand" href="#">
-          <img src="img/H1.png" alt="logo brand" style="height: 65px; width: 65px">
+        <a class="navbar-brand" href="../index.php">
+          <img src="../img/H1.png" alt="logo brand" style="height: 65px; width: 65px">
           <span>Hydro-Mon</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,8 +29,8 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link" href="#">Home</span></a>
-            <a class="nav-link" href="PHP/table.php">Data</a>
+            <a class="nav-link" href="../index.php">Home</span></a>
+            <a class="nav-link" href="#">Data</a>
             <a class="nav-link" href="#">Visualization</a>
           </div>
         </div>
@@ -45,10 +45,23 @@
               </div>
           </div>
       </div>
+    <!-- RESET -->
+     
+    <!-- DOWNLOAD -->
+      <div class="container button justify-content-center">
+        <div class="row button-data">
+        <div class="col-2-lg offset-4 justify-content-center">
+              <a target="_blank" href="#" style="background-color: #27221c !important;">Reset Data</a>
+        </div>
+            <div class="col-6-lg justify-content-center">
+              <a onclick="window.location.href='https://lan-komputasi.000webhostapp.com/PHP/export_excel.php'">Download Data</a>
+            </div>
+        </div>
+      </div>
       <!-- End Upper Content -->
 
       <!-- Table Content -->
-      <!-- <div class="container data-table table-wrapper-scroll-y my-custom-scrollbar">
+      <div class="container data-table table-wrapper-scroll-y my-custom-scrollbar">
         <table id="data" class="table table-striped table-bordered table-striped mb-0">
             <thead>
               <tr>
@@ -79,7 +92,7 @@
             }
             ?>
           </table>
-      </div> -->
+      </div>
       <!-- End Table Content -->
 
     <!-- Optional JavaScript; choose one of the two! -->

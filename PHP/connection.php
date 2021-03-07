@@ -6,7 +6,7 @@
     $password = "R@silwa150800";
     $dbname = "id15860656_hydromon";
 
-    $connection = mysqli_connect($servername, $username, $dbname);
+    $connection = mysqli_connect($servername, $username, $password, $dbname);
 
     if (mysqli_connect_error()){
         echo " Maaf, anda gagal terhubung ke Database : ".mysqli_connect_errno();
