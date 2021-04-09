@@ -11,7 +11,11 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- SCSS -->
     <link rel="stylesheet" href="scss/main.css">
+
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <!-- Web icon -->
     <link rel="icon" href="img/HB1.png">
@@ -37,14 +41,29 @@
       </nav>
       <!-- END NAVBAR -->
       <!-- Upper content -->
-      <div class="container content">
+      <!-- <div class="container content">
           <div class="row upper-content">
               <div class="col-12">
                   <h2>Selamat Datang di Hydro-Mon..</h2>
                   <h3>Website monitoring pengukuran gas hidrogren secara real time.</h3>
               </div>
           </div>
+      </div> -->
+
+      <div class="container">
+        <div class="row upper-content">
+          <div class="col-12 col-lg-4" style="margin-top: 100px;">
+            <h2 class="animate__animated animate__fadeInUp">Hydro-Mon</h2>
+            <h3 class="animate__animated animate__fadeIn animate__delay-1s">Sistem Monitoring Aliran Gas Hidrogren Real Time
+            </h3>
+            <p class="animate__animated animate__fadeIn animate__delay-2s">Dengan menggunakan konsep Internet of Things, seluruh sektor industri dapat dipantau dari kejauhan.
+            <p class="animate__animated animate__fadeIn animate__delay-2s">
+            ingin mencoba unduh dan melihat data hasil dari Hydro-Mon? Silahan kunjungi halaman data kami..</p>
+            <a class="slide-scroll animate__animated animate__fadeInUp animate__delay-3s" href="PHP/table.php" style="margin-top: 10px;">Coba Sekarang!</a>
+          </div>
+        </div>
       </div>
+
       <!-- End Upper Content -->
 
       <!-- Table Content -->
@@ -57,27 +76,7 @@
                 <th scope="col">Waktu</th>
               </tr>
             </thead>
-            <?php
-            $SQL = mysqli_query($connection, "SELECT * FROM  ESP01 ORDER BY id DESC");
-           
-            if(mysqli_num_rows($SQL) == 0){
-              echo '<tr><td colspan="14">Data Tidak Ada.</td></tr>';
-            }else {
-              $no = 1;
-              while($row = mysqli_fetch_assoc($SQL)){
-                echo'
-                <tbody>
-              <tr>
-                <th scope="row">'.$no.'</th>
-                <td>'.$row['debit'].'</td>
-                <td>'.$row['waktu'].'</td>
-              </tr>
-            </tbody>
-                ';
-                $no++;
-              }
-            }
-            ?>
+            
           </table>
       </div> -->
       <!-- End Table Content -->
@@ -94,5 +93,19 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script>
+    //ANIMATION
+    $(window).scroll(function(){
+      var scroll = $(this).scrollTop();
+      $('.animation').each(function(){
+        var elTop = $(this).offset().top - 500;
+        if(scroll > elTop){
+          $(this).addClass('animate__animated animate__fadeInUp');
+        }
+      });
+    });
+  </script>
   </body>
 </html>

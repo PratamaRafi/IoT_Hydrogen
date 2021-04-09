@@ -18,7 +18,7 @@ $setData = '';
 }  
   
 header("Content-type: application/octet-stream");  
-header("Content-Disposition: attachment; filename=Data_Hidrogen.xls");  
+header("Content-Disposition: attachment; filename=Data_Hidrogen.xlsx");  
 header("Pragma: no-cache");  
 header("Expires: 0");  
 

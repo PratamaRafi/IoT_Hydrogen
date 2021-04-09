@@ -50,10 +50,10 @@
     <!-- DOWNLOAD -->
       <div class="container button justify-content-center">
         <div class="row button-data">
-        <div class="col-2-lg offset-4 justify-content-center">
+        <div class="col-2 offset-4 justify-content-center">
               <a target="_blank" href="#" style="background-color: #27221c !important;">Reset Data</a>
         </div>
-            <div class="col-6-lg justify-content-center">
+            <div class="col-6 justify-content-center">
               <a onclick="window.location.href='https://lan-komputasi.000webhostapp.com/PHP/export_excel.php'">Download Data</a>
             </div>
         </div>
